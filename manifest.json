@@ -1,8 +1,9 @@
 {
   "domain": "youtube_media_player",
   "name": "Youtube media player",
+  "version": "0.0.1",
   "documentation": "",
-  "dependencies": ["websockets", "nest_asyncio"],
+  "dependencies": [],
   "codeowners": [],
   "requirements": []
 }

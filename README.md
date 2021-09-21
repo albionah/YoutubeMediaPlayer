@@ -1,5 +1,5 @@
 # Youtube Media Player
-It is extension for [Home Assistant](https://www.home-assistant.io/), which adds ability to control Youtube videos.
+It is an extension for [Home Assistant](https://www.home-assistant.io/), which adds ability to control Youtube videos.
 
 ## Requirements
 - [Home Assistant](https://www.home-assistant.io/)

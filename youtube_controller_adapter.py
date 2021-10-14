@@ -20,5 +20,5 @@ class YoutubeControllerAdapter:
     def watch_next(self, youtube_instance_id):
         self.__command({"command": "watch-next", "youtubeInstanceId": youtube_instance_id})
 
-    def __command(self, route, body_data):
+    def __command(self, body_data):
         requests.post(self.__youtube_controller_base_url + "/youtube-instances/commands", json=body_data)

@@ -9,7 +9,6 @@ from homeassistant.const import (
     STATE_PAUSED,
     STATE_PLAYING,
     CONF_HOST,
-    CONF_PORT,
 )
 from homeassistant.components.media_player.const import (
     ATTR_MEDIA_TITLE,
@@ -47,6 +46,7 @@ SUPPORT_FEATURES = (
     | SUPPORT_PREVIOUS_TRACK
 )
 
+ENTITY_ID_PREFIX = "media_player.youtubemediaplayer"
 
 DEFAULT_CONTROLLING_PORT = 7790
 DEFAULT_SUBSCRIBING_PORT = 7792
@@ -99,8 +99,16 @@ class YoutubeMediaPlayer(MediaPlayerEntity):
         self.__youtube_controller_adapter = __youtube_controller_adapter
 
     @property
+    def entity_id(self):
+        return ENTITY_ID_PREFIX + "_" + self.instance_id.replace("-", "_")
+
+    @property
     def name(self):
-        return 'YoutubeMediaPlayer'
+        return "YoutubeMediaPlayer"
+
+    @property
+    def icon(self):
+        return "hass:youtube"
 
     @property
     def state(self):

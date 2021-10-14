@@ -1,7 +1,7 @@
 {
   "domain": "youtube_media_player",
   "name": "Youtube media player",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "documentation": "",
   "dependencies": [],
   "codeowners": [],
